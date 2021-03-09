@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{9F86BEDA-1880-4FCC-9DA1-6E78E99DCB01}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{3B236B20-1CDE-4D87-BF67-A3337B2640C7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqNXWADi+E0eeDSXhLqUbVQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADSAQ1VTVZeuh/R+R4TG+ALU52BmpDF0SUpNty9C2aEuAAAAAAOgAAAAAIAACAAAABkXLuI18cr8MXiUqwG41eF8QtMMmS1hqjvn9M8iwcLTjAAAADu/cL66I2yPxOoKvG5IepCfWPzthpKzDzg2+CARF9NisapioqYwCT4aJU16tG5zUNAAAAAthqAwxXT7usifLevnm6UfLoleHM/njibztP9dYswRyZEXCMb/5HK2WB25zZCiZJR6gdB0PHQlJu7eyZzxI6rcw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqNXWADi+E0eeDSXhLqUbVQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3rMhVPhzJQLhLL06YIraYdYDinow6kl8YdwOU2iHCRgAAAAAOgAAAAAIAACAAAACFA0t4OIimjrZSxPE79bhG2xl5AVsS1XfpZlhyAbmAejAAAABv/Gh6CxxdV29G9+Iszrs9Anvga/+TSjj1qdBZj3VsAaqgBNivd0yaL6nuSGC615lAAAAAqk0IRQwuwl8nZXdBntRRB4aebsZGDQPpiI8PNbSp/+TvxghcXwJMZjhLxaiBIibAhNguRcPIejqvzfEL3XtUcw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqNXWADi+E0eeDSXhLqUbVQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADL3/cvOu+6k4gMJbKPr8tiq2WGWQlxkAVKSOXPngxN/AAAAAAOgAAAAAIAACAAAAB5OWzOFSfMCLaACzaJU94Dn3lOFHhrU48dqp9bImrShCAAAADFa6M0DqOFCDdw949GiF6QR+yLfXnUv5jMuHSQtNv7QEAAAADjF6Q8a8ft6Y/K5wlBJ3d34lj/9exPiMDPolmfEbjY488owJa464WHBE/HDYHRnH6TL9Soi9+8rpO1lsdv4+A4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqNXWADi+E0eeDSXhLqUbVQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACZgrlA+sNuOOo3NnZCcWLyy9DP/+/ZLcAumKOdZTbTaQAAAAAOgAAAAAIAACAAAADagZ8lTy+QFW9I9u/2QyNurA5I5hnwc0P98S9FBRxFpSAAAADut+SX5+BLNUf+DAryhFG+48TU8MMtAZLMe0/TPS6T90AAAADc4YyifBkG+mbQUwlaUwtbeT4GzWyKNAe3KF6g+k1KcF7P1i4tQBr8wltQ16Tmew8eMWmpseKifCcG9Fp5swji</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1209,6 +1209,7 @@ where [refTable].[CatégorieMenuClé] = ?</property>
           DTS:refId="Package\Load DataWarehouse\load région"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
+          DTS:Disabled="True"
           DTS:DTSID="{EF1DD767-8DDB-41D5-823A-A7E61C7B3D8E}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -1370,104 +1371,6 @@ where [refTable].[PaysClé] = ?</property>
                           refId="Package\Load DataWarehouse\load région\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Load DataWarehouse\load région\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Load DataWarehouse\load région\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="OLE DB Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset"></property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">0</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Load DataWarehouse\load région\OLE DB Destination.Connections[OleDbConnection]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Load DataWarehouse\load région\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <externalMetadataColumns
-                        isUsed="True" />
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Load DataWarehouse\load région\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Load DataWarehouse\load région\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Load DataWarehouse\load région\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Load DataWarehouse\load région\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Load DataWarehouse\load région\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Load DataWarehouse\load région\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -2006,10 +1909,6 @@ where [refTable].[PaysClé] = ?</property>
           Size="157,42"
           Id="Package\Load DataWarehouse\load région\OLE DB Source"
           TopLeft="285,58" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Load DataWarehouse\load région\OLE DB Destination"
-          TopLeft="898,75" />
         <NodeLayout
           Size="115,42"
           Id="Package\Load DataWarehouse\load région\Lookup"
